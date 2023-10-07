@@ -1,0 +1,16 @@
+try:
+    temp=float(input("enter the temperature in a number format or in a decimal format:"))
+
+    print("SELECT CONVERSION:")
+    print("C:celsius to fahrenheit" )
+    print("F:fahrenheit to celsius")
+    unit=input("ENTER YOUR CHOICE  (C/F):").upper()
+    if unit=="C":
+        temp=round((9*temp)/5+32,1)
+        print(f"the  temparature in fahrenheit is:{temp}°F")
+    elif unit=="F":
+        temp=round((temp-32)*5/9,1)
+        print(f"the temparature in celsius is:{temp}°C")
+except ValueError:
+    print("Invalid input.please enter a valid number or decimal number")    
+    
